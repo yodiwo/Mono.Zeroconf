@@ -61,6 +61,10 @@
       <Project>{ef6ed6d1-d201-42ed-b680-5a77641beb77}</Project>
       <Name>Mono.Zeroconf.Providers.AvahiDBus</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Mono.Zeroconf.Providers.Bonjour\Mono.Zeroconf.Providers.Bonjour.csproj">
+      <Project>{623325e2-5821-4701-a40c-3759097008dd}</Project>
+      <Name>Mono.Zeroconf.Providers.Bonjour</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Mono.Zeroconf\Mono.Zeroconf.csproj">
       <Project>{839D9048-31CF-4010-B427-6A8362556485}</Project>
       <Name>Mono.Zeroconf</Name>

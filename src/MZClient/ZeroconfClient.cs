@@ -46,8 +46,10 @@ public class MZClient
         string type = "_workstation._tcp";
         bool show_help = false;
         ArrayList services = new ArrayList();
-        
-        for(int i = 0; i < args.Length; i++) {
+        services.Add("_http._tcp 80 mysimpleweb");
+
+
+        for (int i = 0; i < args.Length; i++) {
             if(args[i][0] != '-') {
                 continue;
             }

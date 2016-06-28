@@ -34,54 +34,62 @@ namespace Mono.Zeroconf
     public class RegisterService : IRegisterService
     {
         private IRegisterService register_service;
-        
+
         public RegisterService()
         {
+            var prov = ProviderFactory.SelectedProvider.RegisterService;
             register_service = (IRegisterService)Activator.CreateInstance(
                 ProviderFactory.SelectedProvider.RegisterService);
         }
-        
+
         public void Register()
         {
             register_service.Register();
         }
-        
+
         public void Dispose()
         {
             register_service.Dispose();
         }
-        
-        public event RegisterServiceEventHandler Response {
+
+        public event RegisterServiceEventHandler Response
+        {
             add { register_service.Response += value; }
             remove { register_service.Response -= value; }
         }
-        
-        public string Name {
+
+        public string Name
+        {
             get { return register_service.Name; }
             set { register_service.Name = value; }
         }
-        
-        public string RegType {
+
+        public string RegType
+        {
             get { return register_service.RegType; }
             set { register_service.RegType = value; }
         }
-        
-        public string ReplyDomain {
+
+        public string ReplyDomain
+        {
             get { return register_service.ReplyDomain; }
             set { register_service.ReplyDomain = value; }
         }
-        
-        public ITxtRecord TxtRecord { 
+
+        public ITxtRecord TxtRecord
+        {
             get { return register_service.TxtRecord; }
             set { register_service.TxtRecord = value; }
         }
-        
-        public short Port {
+
+        public short Port
+        {
             get { return register_service.Port; }
             set { register_service.Port = value; }
         }
-        
-        public ushort UPort {
+
+        public ushort UPort
+        {
             get { return register_service.UPort; }
             set { register_service.UPort = value; }
         }
